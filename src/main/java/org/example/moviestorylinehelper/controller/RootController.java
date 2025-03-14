@@ -12,7 +12,9 @@ import java.io.IOException;
 
 @WebServlet ("/")
 public class RootController extends Controller {
-
+    public void init() throws ServletException {
+        log("RootController init");
+    }
     final static TogetherService togetherService = TogetherService.getInstance();
 
     @Override
