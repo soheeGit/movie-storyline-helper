@@ -12,12 +12,8 @@ import java.io.IOException;
 
 @WebServlet("/")
 public class RootController extends Controller {
-    private TogetherService togetherService;
+    private final TogetherService togetherService = TogetherService.getInstance();;
 
-    public void init() throws ServletException {
-        log("RootController init");
-        togetherService = TogetherService.getInstance();
-    }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         req.setCharacterEncoding("UTF-8");
