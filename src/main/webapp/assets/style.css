@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Ownglyph_corncorn-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2412-1@1.0/Ownglyph_corncorn-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {font-family: Ownglyph_corncorn-Rg, sans-serif;}
+body { text-align: center; background-color: #f4f4f4; padding: 20px; }
+h1 { color: #333; }
+form { margin: 20px auto; padding: 20px; background: white; width: 400px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+input, select, button { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+/* 로딩 스피너 스타일 */
+#loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 16px solid #f3f3f3; /* 배경 색 */
+    border-top: 16px solid #3498db; /* 스피너 색 */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite; /* 애니메이션 설정 */
+}
+
+/* 스피너 회전 애니메이션 */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+button { background-color: #007bff; color: white; cursor: pointer; }
+button:hover { background-color: #0056b3; }
+.result { margin-top: 20px; padding: 20px; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+img { max-width: 100%; border-radius: 10px; }
+.reset { margin-top: 30px; text-align: center; }
