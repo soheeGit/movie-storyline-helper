@@ -11,7 +11,7 @@ import org.example.moviestorylinehelper.model.repository.TogetherRepository;
 public class TogetherService {
     private TogetherService() {}
     private static final TogetherService instance = new TogetherService();
-    private ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = new ObjectMapper();
     private final TogetherRepository repository = TogetherRepository.getInstance();
     public static TogetherService getInstance() {
         return instance;

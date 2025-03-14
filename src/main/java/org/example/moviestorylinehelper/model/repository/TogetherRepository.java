@@ -10,7 +10,6 @@ import java.util.List;
 
 public class TogetherRepository implements APIClient {
     private TogetherRepository() {}
-    private final Dotenv dotenv = Dotenv.load();
     private final static TogetherRepository instance = new TogetherRepository();
     public static TogetherRepository getInstance() {
         return instance;
