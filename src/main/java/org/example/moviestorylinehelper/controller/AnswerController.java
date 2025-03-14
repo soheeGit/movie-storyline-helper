@@ -10,6 +10,9 @@ import java.io.IOException;
 
 @WebServlet ("/result")
 public class AnswerController extends Controller {
+    public void init() throws ServletException {
+        log("AnswerController init");
+    }
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         HttpSession session = req.getSession();
