@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebServlet ("/result")
+@WebServlet("/result")
 public class AnswerController extends Controller {
     public void init() throws ServletException {
         log("AnswerController init");

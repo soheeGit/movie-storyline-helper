@@ -10,7 +10,7 @@ import org.example.moviestorylinehelper.service.TogetherService;
 
 import java.io.IOException;
 
-@WebServlet ("/")
+@WebServlet("/")
 public class RootController extends Controller {
     public void init() throws ServletException {
         log("RootController init");
