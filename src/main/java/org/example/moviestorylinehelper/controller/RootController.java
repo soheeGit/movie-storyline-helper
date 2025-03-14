@@ -12,7 +12,13 @@ import java.io.IOException;
 
 @WebServlet("/")
 public class RootController extends Controller {
-    private final TogetherService togetherService = TogetherService.getInstance();;
+    private TogetherService togetherService;
+
+    @Override
+    public void init() throws ServletException {
+        log("RootController init");
+        togetherService = TogetherService.getInstance();
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
